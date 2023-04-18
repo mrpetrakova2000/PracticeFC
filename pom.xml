@@ -77,8 +77,8 @@
 					<jdbc>
 						<driver>com.mysql.cj.jdbc.Driver</driver>
 						<url>jdbc:mysql://localhost:3306/worldbank</url>
-						<user>root</user>
-						<password>123456</password>
+						<user>etu_worldbank</user>
+						<password>ETU_worldbank23</password>
 					</jdbc>
 					<generator>
 						<name>org.jooq.codegen.JavaGenerator</name>
@@ -89,12 +89,7 @@
 							<excludes></excludes>
 						</database>
 						<generate>
-							<pojos>true</pojos>
-							<pojosEqualsAndHashCode>
-								true
-							</pojosEqualsAndHashCode>
-							<javaTimeTypes>true</javaTimeTypes>
-							<fluentSetters>true</fluentSetters>
+							<records>true</records>
 						</generate>
 						<target>
 							<packageName>
