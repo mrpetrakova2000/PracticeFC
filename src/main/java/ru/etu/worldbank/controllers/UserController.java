@@ -30,7 +30,7 @@ public class UserController {
         this.authenticationManager = authenticationManager;
     }
 
-    @PostMapping(path = "/api/login", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/api/v1/login", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity getAuthUser(@RequestBody UserDTO userDTO) {
         try {
             User user = convertToEntity(userDTO);
@@ -48,7 +48,7 @@ public class UserController {
         return user;
     }
 
-    @PostMapping(path = "/api/registration", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/api/v1/registration", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity addUser(@RequestBody UserDTO userDTO)  {
         User user = convertToEntity(userDTO);
         if (service.addUser(user) != null) {

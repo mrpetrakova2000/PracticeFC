@@ -56,7 +56,11 @@
 			<artifactId>modelmapper</artifactId>
 			<version>2.4.4</version>
 		</dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -89,7 +93,9 @@
 							<excludes></excludes>
 						</database>
 						<generate>
-							<records>true</records>
+<!--							<records>true</records>-->
+							<pojos>true</pojos>
+							<pojosAsJavaRecordClasses>true</pojosAsJavaRecordClasses>
 						</generate>
 						<target>
 							<packageName>
