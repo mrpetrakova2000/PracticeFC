@@ -30,8 +30,10 @@ public class SpringConfig {
                         "/swagger-ui/**",
                         "/v3/api-docs/**",
                         "/test",
-                        "/api/login",
-                        "/api/registration"
+                        "/api/v1/login",
+                        "/api/v1/registration"
+                        //"/api/v1/female-in-math/**",
+                        //"/api/v1/female-in-math"
                 ).permitAll()
                 .anyRequest().authenticated();
         return http.build();

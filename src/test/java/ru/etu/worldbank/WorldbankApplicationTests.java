@@ -3,45 +3,33 @@
 //import org.junit.jupiter.api.Test;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.test.context.SpringBootTest;
-//import ru.etu.worldbank.models.User;
-//import ru.etu.worldbank.service.UserService;
+//import ru.etu.worldbank.models.FemaleInMathDm;
+//import ru.etu.worldbank.service.FemaleInMathDmService;
 //
 //import java.util.List;
+//import java.util.Optional;
 //
 //@SpringBootTest
 //class WorldbankApplicationTests {
 //	@Autowired
-//	private UserService service;
+//	private FemaleInMathDmService service;
 //
 //	@Test
 //	void viewAll() {
-//		List<User> users = service.getAll();
-//		assert users != null;
-//		for (User user : users){
-//			user.viewUser();
+//		List<FemaleInMathDm> female = service.get(null);
+//		assert female != null;
+//		for (FemaleInMathDm fem : female){
+//			fem.view();
 //		}
 //	}
 //
 //	@Test
-//	void addUser() {
-//		User user = new User("marina", "password");
-//		User added = service.addUser(user);
-//		assert added != null;
-//		added.viewUser();
-//	}
-//
-//	@Test
-//	void findById() {
-//		User user = service.findById(2);
-//		assert user != null;
-//		user.viewUser();
-//	}
-//
-//	@Test
-//	void findByLogin() {
-//		User user = service.findByUsername("marina");
-//		assert user != null;
-//		user.viewUser();
+//	void view() {
+//		List<FemaleInMathDm> female = service.get(Optional.of("TUR"));
+//		assert female != null;
+//		for (FemaleInMathDm fem : female){
+//			fem.view();
+//		}
 //	}
 //
 //}
