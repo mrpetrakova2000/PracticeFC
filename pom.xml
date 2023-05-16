@@ -17,6 +17,27 @@
 		<java.version>17</java.version>
 		<jooq.version>3.17.8</jooq.version>
 	</properties>
+	<profiles>
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<server.port>8080</server.port>
+				<spring.datasource.username>etu-worldbank</spring.datasource.username>
+				<spring.datasource.password>ETU-worldbank23</spring.datasource.password>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<server.port>8001</server.port>
+				<spring.datasource.username>etu_worldbank</spring.datasource.username>
+				<spring.datasource.password>ETU_worldbank23</spring.datasource.password>
+			</properties>
+		</profile>
+	</profiles>
 	<dependencies>
 		<dependency>
 			<groupId>org.springdoc</groupId>
