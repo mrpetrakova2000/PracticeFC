@@ -102,8 +102,8 @@
 					<jdbc>
 						<driver>com.mysql.cj.jdbc.Driver</driver>
 						<url>jdbc:mysql://localhost:3306/worldbank</url>
-						<user>etu_worldbank</user>
-						<password>ETU_worldbank23</password>
+						<user>${spring.datasource.username}</user>
+						<password>${spring.datasource.password}</password>
 					</jdbc>
 					<generator>
 						<name>org.jooq.codegen.JavaGenerator</name>

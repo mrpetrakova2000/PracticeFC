@@ -5,5 +5,8 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/worldbank
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: etu_worldbank
-    password: ETU_worldbank23
+    username: @spring.datasource.username@
+    password: @spring.datasource.password@
+server:
+  port: @server.port@
+  forward-headers-strategy: FRAMEWORK
