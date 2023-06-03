@@ -1,0 +1,11 @@
+type FemaleInMathDm {
+    countryName: String,
+    countryCode: String,
+    year: Int,
+    value: Float
+}
+
+# The Root Query for the application
+type Query {
+    getFemaleInMath(countryCode: String): [FemaleInMathDm]
+}
