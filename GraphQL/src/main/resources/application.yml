@@ -1,0 +1,14 @@
+server:
+  port: @server.port@
+  forward-headers-strategy: FRAMEWORK
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/worldbank
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: @spring.datasource.username@
+    password: @spring.datasource.password@
+  graphql:
+    graphiql:
+      enabled: true
+
