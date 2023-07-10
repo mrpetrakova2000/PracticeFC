@@ -5,7 +5,15 @@ type FemaleInMathDm {
     value: Float
 }
 
+type ChildrenOutOfSchoolDm {
+    countryName: String,
+    countryCode: String,
+    year: Int,
+    value: Int
+}
+
 # The Root Query for the application
 type Query {
     getFemaleInMath(countryCode: String): [FemaleInMathDm]
+    getChildrenOutOfSchool(countryCode: String): [ChildrenOutOfSchoolDm]
 }
